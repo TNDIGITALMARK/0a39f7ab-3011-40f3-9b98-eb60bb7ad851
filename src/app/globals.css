@@ -1,59 +1,84 @@
 @import "tailwindcss";
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* ============================================
+   RADIO CONSULTANT WEBSITE - DESIGN SYSTEM
+   PIXEL-PERFECT REPLICATION SPECIFICATION
+   ============================================ */
+
+/* Import Google Fonts - Montserrat (headings) & Open Sans (body) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
 All colors MUST be HSL.
 */
 
 :root {
-  /* Pure white background with crisp black text */
+  /* BRAND COLOR PALETTE (EXACT VALUES FROM DESIGN) */
+  /* Primary Navy: #2C3E50 converted to HSL: 210, 29%, 24% */
+  --navy-primary: 210 29% 24%;
+
+  /* Text Dark: #1A252F converted to HSL: 210, 29%, 14% */
+  --navy-dark: 210 29% 14%;
+
+  /* Light Background: #F8F9FA converted to HSL: 210, 17%, 98% */
+  --bg-light: 210 17% 98%;
+
+  /* Border Gray: #E9ECEF converted to HSL: 210, 16%, 93% */
+  --gray-border: 210 16% 93%;
+
+  /* Muted Text: #6C757D converted to HSL: 210, 11%, 46% */
+  --gray-muted: 210 11% 46%;
+
+  /* Accent Blue: #3498DB converted to HSL: 204, 70%, 53% */
+  --blue-accent: 204 70% 53%;
+
+  /* SHADCN THEME COLORS (mapped to brand colors) */
   --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  --foreground: 210 29% 14%;
 
-  /* Clean white cards with black text */
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  --card-foreground: 210 29% 14%;
 
-  /* Popovers with white background */
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  --popover-foreground: 210 29% 14%;
 
-  /* Primary: Black with white text */
-  --primary: 0 0% 0%;
+  /* Primary: Navy brand color */
+  --primary: 210 29% 24%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Light gray background with black text */
-  --secondary: 0 0% 97%;
-  --secondary-foreground: 0 0% 0%;
+  /* Secondary: Light background */
+  --secondary: 210 17% 98%;
+  --secondary-foreground: 210 29% 14%;
 
-  /* Muted: Subtle gray with darker text */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  /* Muted: Subtle gray */
+  --muted: 210 16% 93%;
+  --muted-foreground: 210 11% 46%;
 
-  /* Accent: Light gray */
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 0%;
+  /* Accent: Brand blue */
+  --accent: 204 70% 53%;
+  --accent-foreground: 0 0% 100%;
 
   /* Destructive: Clean red */
   --destructive: 0 70% 50%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Subtle gray */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 0%;
+  /* Borders: Subtle gray from brand */
+  --border: 210 16% 93%;
+  --input: 210 16% 93%;
+  --ring: 210 29% 24%;
 
-  /* Minimal rounded corners */
-  --radius: 0.375rem;
+  /* Border radius from design */
+  --radius: 0.5rem;
 
-  /* Sidebar: Clean white with black text */
+  /* Sidebar colors */
   --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
+  --sidebar-foreground: 210 29% 14%;
+  --sidebar-primary: 210 29% 24%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
+  --sidebar-accent: 210 17% 98%;
+  --sidebar-accent-foreground: 210 29% 14%;
+  --sidebar-border: 210 16% 93%;
+  --sidebar-ring: 210 29% 24%;
 }
 
 .dark {
@@ -98,7 +123,11 @@ All colors MUST be HSL.
   --container: 1400px;
   --container-center: true;
   --container-padding: 2rem;
-  
+
+  /* Font Families */
+  --font-sans: var(--font-open-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-montserrat: var(--font-montserrat), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
   /* Color System */
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
@@ -168,28 +197,109 @@ All colors MUST be HSL.
   border-color: hsl(var(--border));
 }
 
+/* ============================================
+   TYPOGRAPHY SYSTEM (PIXEL-PERFECT)
+   ============================================ */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
   font-feature-settings: "rlig" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Minimal, clean typography */
+/* Heading System - Montserrat Font */
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: hsl(var(--navy-dark));
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem; /* 56px */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.625rem; /* 42px */
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
   font-weight: 600;
-  letter-spacing: -0.025em;
-  color: hsl(var(--foreground));
 }
 
-/* Clean button styles */
+h4 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+}
+
+/* Paragraph and text styles */
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.lead-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: hsl(var(--gray-muted));
+}
+
+.small-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Link styles */
+a {
+  color: hsl(var(--blue-accent));
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: hsl(var(--navy-primary));
+}
+
+/* Button typography */
 button {
-  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-/* Subtle shadows for depth */
+/* ============================================
+   COMPONENT STYLES (PIXEL-PERFECT)
+   ============================================ */
+
+/* Card shadows from design */
 .shadow-sm {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
@@ -199,5 +309,73 @@ button {
 }
 
 .shadow-md {
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 0.08);
+}
+
+.shadow-lg {
+  box-shadow: 0 8px 24px 0 rgb(0 0 0 / 0.12);
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px 0 rgb(0 0 0 / 0.12);
+}
+
+/* Icon container styles */
+.icon-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: hsl(var(--navy-primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon-container svg {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+/* Professional headshot styling */
+.headshot-image {
+  border-radius: 50%;
+  border: 6px solid white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Client logo styling */
+.client-logo {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  max-height: 50px;
+  width: auto;
+}
+
+.client-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* 40px on mobile */
+  }
+
+  h2 {
+    font-size: 2rem; /* 32px on mobile */
+  }
+
+  h3 {
+    font-size: 1.5rem; /* 24px on mobile */
+  }
 }
