@@ -28,12 +28,13 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-b from-white via-[hsl(var(--bg-light))] to-white">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-[hsl(var(--navy-dark))] mb-4">OUR SERVICES</h2>
-          <p className="lead-text max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-[hsl(var(--navy-primary))] mx-auto mb-6"></div>
+          <p className="lead-text max-w-2xl mx-auto text-[hsl(var(--gray-muted))]">
             Comprehensive consulting solutions designed to transform your radio station into a market leader
           </p>
         </div>
@@ -43,29 +44,42 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md p-10 text-center card-hover"
+              className="group relative bg-white rounded-lg shadow-md p-10 text-center card-hover border border-transparent hover:border-[hsl(var(--blue-accent))]/30 transition-all"
             >
-              {/* Icon Container */}
-              <div className="icon-container mb-6">
-                <service.icon className="text-white" size={40} strokeWidth={2} />
+              {/* Decorative gradient on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--blue-accent))]/0 to-[hsl(var(--navy-primary))]/0 group-hover:from-[hsl(var(--blue-accent))]/5 group-hover:to-[hsl(var(--navy-primary))]/5 rounded-lg transition-all"></div>
+
+              {/* Content */}
+              <div className="relative z-10">
+                {/* Icon Container */}
+                <div className="icon-container mb-6 group-hover:scale-110 transition-transform">
+                  <service.icon className="text-white" size={40} strokeWidth={2} />
+                </div>
+
+                {/* Service Title */}
+                <h3 className="text-[hsl(var(--navy-dark))] mb-4 text-center">
+                  {service.title}
+                </h3>
+
+                {/* Service Description */}
+                <p className="text-[hsl(var(--gray-muted))] mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+
+                {/* CTA Button */}
+                <Button variant="outline" size="sm" asChild className="group-hover:border-[hsl(var(--blue-accent))] group-hover:text-[hsl(var(--blue-accent))]">
+                  <Link href={service.href}>LEARN MORE</Link>
+                </Button>
               </div>
-
-              {/* Service Title */}
-              <h3 className="text-[hsl(var(--navy-dark))] mb-4 text-center">
-                {service.title}
-              </h3>
-
-              {/* Service Description */}
-              <p className="text-[hsl(var(--gray-muted))] mb-6 leading-relaxed">
-                {service.description}
-              </p>
-
-              {/* CTA Button */}
-              <Button variant="outline" size="sm" asChild>
-                <Link href={service.href}>READ MORE</Link>
-              </Button>
             </div>
           ))}
+        </div>
+
+        {/* View All Services CTA */}
+        <div className="text-center mt-12">
+          <Button size="lg" asChild>
+            <Link href="/services">VIEW ALL SERVICES</Link>
+          </Button>
         </div>
       </div>
     </section>

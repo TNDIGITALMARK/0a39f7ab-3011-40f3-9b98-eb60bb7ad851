@@ -48,33 +48,49 @@ export function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-white/90 hover:text-white transition-colors"
+                  className="text-white/90 hover:text-[hsl(var(--blue-accent))] transition-colors"
                 >
                   Home
                 </Link>
               </li>
               <li>
                 <Link
+                  href="/about"
+                  className="text-white/90 hover:text-[hsl(var(--blue-accent))] transition-colors"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/services"
-                  className="text-white/90 hover:text-white transition-colors"
+                  className="text-white/90 hover:text-[hsl(var(--blue-accent))] transition-colors"
                 >
                   Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/contact"
-                  className="text-white/90 hover:text-white transition-colors"
+                  href="/case-studies"
+                  className="text-white/90 hover:text-[hsl(var(--blue-accent))] transition-colors"
                 >
-                  Contact
+                  Case Studies
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#testimonials"
-                  className="text-white/90 hover:text-white transition-colors"
+                  href="/resources"
+                  className="text-white/90 hover:text-[hsl(var(--blue-accent))] transition-colors"
                 >
-                  Testimonials
+                  Resources
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-white/90 hover:text-[hsl(var(--blue-accent))] transition-colors"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -89,7 +105,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services#programming"
-                  className="text-white/90 hover:text-white transition-colors"
+                  className="text-white/90 hover:text-[hsl(var(--blue-accent))] transition-colors"
                 >
                   Programming Strategy
                 </Link>
@@ -97,7 +113,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services#audience"
-                  className="text-white/90 hover:text-white transition-colors"
+                  className="text-white/90 hover:text-[hsl(var(--blue-accent))] transition-colors"
                 >
                   Audience Engagement
                 </Link>
@@ -105,7 +121,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services#analytics"
-                  className="text-white/90 hover:text-white transition-colors"
+                  className="text-white/90 hover:text-[hsl(var(--blue-accent))] transition-colors"
                 >
                   Performance Analytics
                 </Link>
@@ -113,7 +129,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services#branding"
-                  className="text-white/90 hover:text-white transition-colors"
+                  className="text-white/90 hover:text-[hsl(var(--blue-accent))] transition-colors"
                 >
                   Branding Consultation
                 </Link>
@@ -131,7 +147,7 @@ export function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[hsl(var(--blue-accent))] hover:scale-110 flex items-center justify-center transition-all"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -140,7 +156,7 @@ export function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[hsl(var(--blue-accent))] hover:scale-110 flex items-center justify-center transition-all"
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
@@ -149,7 +165,7 @@ export function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[hsl(var(--blue-accent))] hover:scale-110 flex items-center justify-center transition-all"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
