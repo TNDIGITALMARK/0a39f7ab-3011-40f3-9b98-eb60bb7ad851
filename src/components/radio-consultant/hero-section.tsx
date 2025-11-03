@@ -60,62 +60,43 @@ export function HeroSection() {
       </div>
 
       <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
-        <div className="grid md:grid-cols-5 gap-12 items-center">
-          {/* Professional Headshot - Left Column (2/5) */}
-          <div className="md:col-span-2 flex justify-center md:justify-end">
-            <div className="relative w-[240px] h-[240px] md:w-[280px] md:h-[280px] animate-fade-in">
-              <Image
-                src="/generated/consultant-headshot.png"
-                alt="Professional Radio Consultant"
-                width={280}
-                height={280}
-                className="headshot-image w-full h-full object-cover"
-                priority
-              />
-              {/* Animated decorative ring */}
-              <div className="absolute -inset-4 border-4 border-[hsl(var(--blue-accent))]/40 rounded-full -z-10 animate-pulse-ring"></div>
-              <div className="absolute -inset-6 border-2 border-white/20 rounded-full -z-10 animate-pulse-ring" style={{ animationDelay: '1s' }}></div>
+        <div className="flex flex-col items-center justify-center text-center max-w-5xl mx-auto">
+          {/* Hero Content - Centered */}
+          <div className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold font-montserrat mb-6 border border-white/20">
+            TRUSTED BY 200+ STATIONS NATIONWIDE
+          </div>
+          <h1 className="hero-title mb-6 leading-tight">
+            TRANSFORM YOUR STATION INTO A MARKET LEADER
+          </h1>
+          <p className="text-white/90 text-xl mb-4 max-w-2xl drop-shadow-lg">
+            Strategic programming, audience development, and performance analytics that deliver measurable ratings improvements within 90 days.
+          </p>
+          <div className="flex items-center gap-6 mb-8 justify-center text-white font-medium">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-[hsl(var(--blue-accent))] shadow-lg shadow-[hsl(var(--blue-accent))]/50"></div>
+              <span className="drop-shadow-md">Proven Results</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-[hsl(var(--blue-accent))] shadow-lg shadow-[hsl(var(--blue-accent))]/50"></div>
+              <span className="drop-shadow-md">15+ Years Experience</span>
             </div>
           </div>
-
-          {/* Hero Content - Right Column (3/5) */}
-          <div className="md:col-span-3 text-center md:text-left">
-            <div className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold font-montserrat mb-6 border border-white/20">
-              TRUSTED BY 200+ STATIONS NATIONWIDE
-            </div>
-            <h1 className="hero-title mb-6 leading-tight">
-              TRANSFORM YOUR STATION INTO A MARKET LEADER
-            </h1>
-            <p className="text-white/90 text-xl mb-4 max-w-2xl drop-shadow-lg">
-              Strategic programming, audience development, and performance analytics that deliver measurable ratings improvements within 90 days.
-            </p>
-            <div className="flex items-center gap-6 mb-8 justify-center md:justify-start text-white font-medium">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-[hsl(var(--blue-accent))] shadow-lg shadow-[hsl(var(--blue-accent))]/50"></div>
-                <span className="drop-shadow-md">Proven Results</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-[hsl(var(--blue-accent))] shadow-lg shadow-[hsl(var(--blue-accent))]/50"></div>
-                <span className="drop-shadow-md">15+ Years Experience</span>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button
-                size="lg"
-                asChild
-                className="bg-white text-[hsl(var(--navy-primary))] hover:bg-white/90 shadow-2xl hover:shadow-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <Link href="/contact">SCHEDULE FREE CONSULTATION</Link>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                asChild
-                className="border-2 border-white text-white hover:bg-white hover:text-[hsl(var(--navy-primary))] shadow-xl transition-all duration-300 hover:scale-105"
-              >
-                <Link href="/case-studies">VIEW SUCCESS STORIES</Link>
-              </Button>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              asChild
+              className="bg-white text-[hsl(var(--navy-primary))] hover:bg-white/90 shadow-2xl hover:shadow-white/20 transition-all duration-300 hover:scale-105"
+            >
+              <Link href="/contact">SCHEDULE FREE CONSULTATION</Link>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              asChild
+              className="border-2 border-white text-white hover:bg-white hover:text-[hsl(var(--navy-primary))] shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <Link href="/case-studies">VIEW SUCCESS STORIES</Link>
+            </Button>
           </div>
         </div>
 
