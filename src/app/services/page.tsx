@@ -72,7 +72,7 @@ export default function ServicesPage() {
         {/* Hero Section */}
         <section className="bg-[hsl(var(--navy-primary))] text-white pt-[140px] pb-20">
           <div className="container mx-auto px-6 md:px-12 lg:px-16 text-center">
-            <h1 className="text-white mb-4">OUR SERVICES</h1>
+            <h1 className="hero-title mb-4">OUR SERVICES</h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Comprehensive consulting solutions designed to transform your radio station into a market leader through strategic programming, audience development, and performance optimization.
             </p>

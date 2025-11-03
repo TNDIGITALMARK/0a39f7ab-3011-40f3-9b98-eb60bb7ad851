@@ -119,7 +119,7 @@ export default function CaseStudiesPage() {
 
           <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-white mb-6">SUCCESS STORIES</h1>
+              <h1 className="hero-title mb-6">SUCCESS STORIES</h1>
               <p className="text-xl text-white/90 leading-relaxed">
                 Real results from real clients. See how we've helped radio stations across diverse markets achieve measurable ratings improvements, audience growth, and competitive market positioning.
               </p>

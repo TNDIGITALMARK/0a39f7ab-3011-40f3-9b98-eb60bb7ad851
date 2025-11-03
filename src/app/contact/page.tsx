@@ -54,7 +54,7 @@ export default function ContactPage() {
         {/* Hero Section */}
         <section className="bg-[hsl(var(--navy-primary))] text-white pt-[140px] pb-20">
           <div className="container mx-auto px-6 md:px-12 lg:px-16 text-center">
-            <h1 className="text-white mb-4">GET IN TOUCH</h1>
+            <h1 className="hero-title mb-4">GET IN TOUCH</h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Ready to transform your radio station? Schedule a free consultation and discover how we can help you achieve market leadership.
             </p>

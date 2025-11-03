@@ -83,7 +83,7 @@ export default function AboutPage() {
 
           <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-white mb-6 animate-fade-in">ABOUT US</h1>
+              <h1 className="hero-title mb-6 animate-fade-in">ABOUT US</h1>
               <p className="text-xl text-white/90 leading-relaxed mb-8">
                 We're a team of broadcast industry veterans dedicated to transforming radio stations into market leaders through strategic programming, audience development, and performance optimization.
               </p>

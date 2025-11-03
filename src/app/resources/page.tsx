@@ -113,7 +113,7 @@ export default function ResourcesPage() {
 
           <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-white mb-6">INDUSTRY INSIGHTS</h1>
+              <h1 className="hero-title mb-6">INDUSTRY INSIGHTS</h1>
               <p className="text-xl text-white/90 leading-relaxed">
                 Expert perspectives, research-backed strategies, and actionable insights to help radio professionals stay ahead of industry trends and drive measurable results.
               </p>
